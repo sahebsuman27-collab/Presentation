@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         /* Foundational styles for fonts, colors, and layout */
         body {
@@ -15,30 +18,68 @@
             background-color: #F7F5F2;
             color: #333333;
         }
-        .font-playfair { font-family: 'Playfair Display', serif; }
-        .font-lato { font-family: 'Lato', sans-serif; }
-        
-        .primary-color-1 { color: #14b8a6; }
-        .charcoal-grey { color: #333333; }
-        .bg-neutral-off-white { background-color: #F7F5F2; }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .primary-color-1 {
+            color: #14b8a6;
+        }
+
+        .charcoal-grey {
+            color: #333333;
+        }
+
+        .bg-neutral-off-white {
+            background-color: #F7F5F2;
+        }
 
         /* Hides slides by default */
-        .slide { display: none; }
+        .slide {
+            display: none;
+        }
+
         /* Shows the active slide */
-        .slide.active { display: flex; }
+        .slide.active {
+            display: flex;
+        }
 
         /* Animation for a subtle fade-in effect */
         @keyframes subtleFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        .subtle-fade-in { animation: subtleFadeIn 2s forwards; }
+
+        .subtle-fade-in {
+            animation: subtleFadeIn 2s forwards;
+        }
+
+        .subtle-fade-in-delay-1 {
+            animation: subtleFadeIn 2s 0.5s forwards;
+        }
+
 
         /* Dashboard Zoom Animation Keyframes */
         @keyframes zoomIn {
-            from { transform: scale(1); }
-            to { transform: scale(1.5); }
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.5);
+            }
         }
+
         /* Class to apply the zoom animation */
         .animate-zoom {
             animation-name: zoomIn;
@@ -48,24 +89,21 @@
         }
     </style>
 </head>
+
 <body class="bg-neutral-off-white flex items-center justify-center h-screen p-4">
 
     <div id="presentation" class="relative w-[95vw] h-[95vh]">
-        
+
         <!-- Slide 1: Title Slide -->
-        <div id="slide-1" class="slide active absolute inset-0 w-full h-full flex-col justify-center items-center p-12 bg-neutral-off-white rounded-lg transition-opacity duration-1000 overflow-hidden">
+        <div id="slide-1"
+            class="slide active absolute inset-0 w-full h-full flex-col justify-center items-center p-12 bg-neutral-off-white rounded-lg transition-opacity duration-1000 overflow-hidden">
             <div class="relative w-full h-full text-center flex flex-col justify-center items-center">
-                <img
-                    src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/presentation%201.jpeg"
+                <img src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/presentation%201.jpeg"
                     alt="Welcoming healthcare professional"
-                    class="absolute inset-0 w-full h-full object-cover opacity-4 rounded-lg"
-                    onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/cbe3de/333333?text=Healthcare+Setting';"
-                />
-                <img 
-                    src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/header-logo-white.png" 
-                    alt="Breathy Logo" 
-                    class="absolute top-8 right-8 h-12 w-12 rounded-md"
-                />
+                    class="absolute inset-0 w-full h-full object-cover opacity-10 rounded-lg"
+                    onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/cbe3de/333333?text=Healthcare+Setting';" />
+                <img src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/header-logo-white.png"
+                    alt="Breathy Logo" class="absolute top-8 right-8 h-12 w-12 rounded-md" />
                 <div class="relative z-10 subtle-fade-in">
                     <p class="font-lato text-2xl primary-color-1 font-bold">Breathy-For Doctors</p>
                     <h1 class="font-playfair text-6xl primary-color-1 mt-4 max-w-4xl mx-auto">
@@ -79,42 +117,84 @@
         </div>
 
         <!-- Slide 2: Dashboard Slide -->
-        <div id="slide-2" class="slide absolute inset-0 w-full h-full flex-col justify-center items-center p-12 bg-neutral-off-white rounded-lg transition-opacity duration-1000 overflow-hidden">
+        <div id="slide-2"
+            class="slide absolute inset-0 w-full h-full flex-col justify-center items-center p-12 bg-neutral-off-white rounded-lg transition-opacity duration-1000 overflow-hidden">
             <div class="relative w-full h-full flex items-center justify-center bg-gray-100 rounded-lg">
                 <div class="relative w-[80%] h-[80%] overflow-hidden rounded-lg shadow-2xl">
-                    <img
-                        id="dashboard-image"
+                    <img id="dashboard-image"
                         src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/Dashboard.png"
-                        alt="Breathy Dashboard"
-                        class="absolute w-full h-full object-contain"
-                    />
+                        alt="Breathy Dashboard" class="absolute w-full h-full object-contain" />
                 </div>
-                <button
-                    id="play-pause-btn"
+                <button id="play-pause-btn"
                     class="absolute bottom-8 right-8 bg-white/80 backdrop-blur-sm p-4 rounded-full shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#14b8a6]"
-                    aria-label="Pause animation"
-                >
+                    aria-label="Pause animation">
                     <!-- Icon will be injected by JavaScript -->
                 </button>
             </div>
         </div>
 
+        <!-- Slide 3: Calendar Slide -->
+        <div id="slide-3"
+            class="slide absolute inset-0 w-full h-full flex-col justify-center items-center p-12 bg-neutral-off-white rounded-lg transition-opacity duration-1000 overflow-hidden">
+            <div class="flex w-full h-full items-center justify-center gap-12">
+                <!-- Left side: Text content -->
+                <div class="w-1/2 text-left subtle-fade-in">
+                    <h2 class="font-playfair text-5xl primary-color-1 leading-tight">
+                        Seamless Appointment Management
+                    </h2>
+                    <p class="font-lato text-2xl mt-6 charcoal-grey">
+                        All appointments scheduled through the Breathy app are automatically organized and displayed
+                        here, providing a clear and centralized view of your day.
+                    </p>
+                </div>
+                <!-- Right side: Image -->
+                <div class="w-1/2 h-full flex items-center justify-center subtle-fade-in-delay-1">
+                    <img src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/Calender.png"
+                        alt="Breathy Calendar View" class="max-w-full max-h-full object-contain rounded-lg shadow-xl" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Prescription Slide -->
+        <div id="slide-4"
+            class="slide absolute inset-0 w-full h-full flex-col justify-center items-center p-12 bg-neutral-off-white rounded-lg transition-opacity duration-1000 overflow-hidden">
+            <div class="flex w-full h-full items-center justify-center gap-12">
+                <!-- Left side: Image -->
+                <div class="w-1/2 h-full flex items-center justify-center subtle-fade-in">
+                    <img src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/Screenshot%202025-08-26%20141124.png"
+                        alt="Breathy Prescription Interface"
+                        class="max-w-full max-h-full object-contain rounded-lg shadow-xl" />
+                </div>
+                <!-- Right side: Text content -->
+                <div class="w-1/2 text-left subtle-fade-in-delay-1">
+                    <h2 class="font-playfair text-5xl primary-color-1 leading-tight">
+                        Intelligent Prescriptions, Faster Than Ever.
+                    </h2>
+                    <p class="font-lato text-2xl mt-6 charcoal-grey">
+                        Our prescription module is designed for speed and accuracy, featuring smart auto-complete and
+                        AI-powered suggestions. We are continuously enhancing this tool to make it the most intelligent
+                        assistant in your practice.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!-- Master Footer -->
-        <div id="master-footer" class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-gray-400 z-20">
+        <div id="master-footer"
+            class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-gray-400 z-20">
             <div class="flex items-center">
-                <img 
-                    src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/header-logo-white.png" 
-                    alt="Breathy Logo" 
-                    class="h-5 w-5 mr-2 rounded-sm"
-                />
+                <img src="https://nvyyhucqrsptqctegnto.supabase.co/storage/v1/object/public/breathy-content/patient-app-images/header-logo-white.png"
+                    alt="Breathy Logo" class="h-5 w-5 mr-2 rounded-sm" />
                 <span class="font-playfair primary-color-1">Breathy</span>
             </div>
-            <div id="slide-counter">1 / 2</div>
+            <div id="slide-counter">1 / 4</div>
         </div>
 
         <!-- Navigation Buttons -->
-        <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition-colors z-20 hidden">&#10094;</button>
-        <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition-colors z-20">&#10095;</button>
+        <button id="prev-btn"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition-colors z-20 hidden">&#10094;</button>
+        <button id="next-btn"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md hover:bg-white transition-colors z-20">&#10095;</button>
 
     </div>
 
@@ -122,7 +202,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             // --- STATE MANAGEMENT ---
             let currentSlide = 1;
-            const totalSlides = 2;
+            const totalSlides = 4; // Updated total slides
             let isPlaying = true;
             let activeQuadrant = 0;
             const quadrants = ['top left', 'top right', 'bottom left', 'bottom right'];
@@ -167,13 +247,13 @@
                 dashboardImage.classList.remove('animate-zoom');
                 // A slight delay is needed for the browser to recognize the class removal before re-adding it.
                 void dashboardImage.offsetWidth; // This forces a browser reflow.
-                
+
                 dashboardImage.style.transformOrigin = quadrants[activeQuadrant];
                 dashboardImage.classList.add('animate-zoom');
                 dashboardImage.style.animationPlayState = 'running';
                 setIsPlaying(true);
             }
-            
+
             /**
              * Resets the dashboard animation to its initial state.
              */
@@ -192,7 +272,7 @@
                 setIsPlaying(!isPlaying);
                 dashboardImage.style.animationPlayState = isPlaying ? 'running' : 'paused';
             }
-            
+
             /**
              * Updates the isPlaying state and the button icon.
              * @param {boolean} state - The new playing state.
@@ -228,7 +308,7 @@
                     startDashboardAnimation();
                 }
             });
-            
+
             // Keyboard navigation
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowRight' && currentSlide < totalSlides) {
@@ -244,4 +324,5 @@
         });
     </script>
 </body>
+
 </html>
